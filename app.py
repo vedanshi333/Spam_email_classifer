@@ -9,7 +9,7 @@ import streamlit as st
 # Load and prepare your dataset
 @st.cache
 def load_data():
-    df = pd.read_csv('spam_emails.csv')
+    df = pd.read_csv('spam.csv')
     X = df['text']
     y = df['label']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
